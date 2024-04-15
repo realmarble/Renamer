@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "renamer",
+	"version": "${version}",
+	"name": "Renamer",
+	"description": "a simple mod for renaming stuff",
+	"authors": [
+		"moss"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/renamer/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"moss.renamer.Renamer"
+		],
+		"client": [
+			"moss.renamer.RenamerClient"
+		]
+	},
+	"mixins": [
+		"renamer.mixins.json",
+		{
+			"config": "renamer.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.9",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}
